@@ -1,4 +1,3 @@
-
 public class StringReverse {
     /**
      * Task: return the reverse of a string.
@@ -12,7 +11,20 @@ public class StringReverse {
      * @param str a String.
      * @return the reverse of str.
      */
-    public String reverse(String str){
-        return null;
+    public String reverse(String str) {
+        // Handle null case
+        if (str == null) {
+            return null;
+        }
+        
+        // Use StringBuilder for efficient string building
+        StringBuilder reversed = new StringBuilder();
+        
+        // Iterate through the string from end to beginning
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed.append(str.charAt(i));
+        }
+        
+        return reversed.toString();
     }
 }
